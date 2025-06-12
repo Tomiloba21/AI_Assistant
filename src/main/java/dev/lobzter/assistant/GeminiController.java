@@ -21,6 +21,7 @@ public class GeminiController {
 
     @GetMapping
     public Mono<String> prompt(@RequestParam String question){
+
         return geminiService.generateText(question);
     }
 }
